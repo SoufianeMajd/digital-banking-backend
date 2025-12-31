@@ -157,9 +157,9 @@ com.digitalbanking
     *Alternatively, run the `DigitalBankingApplication.java` class from your IDE.*
 
 4.  **Access the Application**
-    *   The server will start on `http://localhost:8080`.
-    *   **H2 Console**: `http://localhost:8080/h2-console` (JDBC URL: `jdbc:h2:mem:testdb`, User: `sa`, Password: `password` or empty depending on config).
-    *   **Swagger UI**: `http://localhost:8080/swagger-ui.html` (if enabled).
+    *   The server will start on `http://localhost:8085`.
+    *   **H2 Console**: `http://localhost:8085/h2-console` (JDBC URL: `jdbc:h2:mem:digitalbankingdb`, User: `sa`, Password: empty).
+    *   **Swagger UI**: `http://localhost:8085/swagger-ui.html` (if enabled).
 
 ## 🧪 Testing
 
