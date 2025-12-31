@@ -1,0 +1,14 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+.classpath
+.project
+.settings
+.idea
+*.iml
+.DS_Store
+*.class
+*.log
+.vscode/
+push_to_github.bat
+screens/
