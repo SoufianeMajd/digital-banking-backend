@@ -10,7 +10,75 @@ A comprehensive **Full Stack Digital Banking Application** featuring a robust **
 
 This system manages customers, banks accounts (Current & Saving), financial transactions, and user authentication with role-based access control (Admin/User).
 
-## � Features
+## 📐 Class Diagram (UML)
+
+```mermaid
+classDiagram
+    %% --- Énumérations ---
+    class AccountStatus {
+        <<enumeration>>
+        CREATED
+        ACTIVATED
+        SUSPENDED
+    }
+
+    class OperationType {
+        <<enumeration>>
+        CREDIT
+        DEBIT
+    }
+
+    %% --- Classes Principales ---
+    class Customer {
+        +String id
+        +String name
+        +String email
+        +List~BankAccount~ bankAccounts
+    }
+
+    class BankAccount {
+        <<abstract>>
+        +String id
+        +Date createdAt
+        +double balance
+        +String currency
+        +AccountStatus status
+        +Customer customer
+        +List~AccountOperation~ operations
+    }
+
+    class CurrentAccount {
+        +double overDraft
+    }
+
+    class SavingAccount {
+        +double interestRate
+    }
+
+    class AccountOperation {
+        +Long id
+        +Date date
+        +double amount
+        +OperationType type
+        +BankAccount bankAccount
+    }
+
+    %% --- Relations d'Héritage (Généralisation) ---
+    %% La flèche pleine pointe vers la classe mère
+    BankAccount <|-- CurrentAccount : hérite de
+    BankAccount <|-- SavingAccount : hérite de
+
+    %% --- Relations d'Association ---
+    %% "1" -- "*" signifie "Un vers Plusieurs"
+    Customer "1" --> "*" BankAccount : possède
+    BankAccount "1" --> "*" AccountOperation : contient
+
+    %% --- Dépendances vers les Enums (Optionnel pour la clarté) ---
+    BankAccount ..> AccountStatus : utilise
+    AccountOperation ..> OperationType : utilise
+```
+
+## 🚀 Features
 
 ### Backend (Spring Boot)
 *   **Security**: Stateless authentication using **JWT (JSON Web Tokens)**.
