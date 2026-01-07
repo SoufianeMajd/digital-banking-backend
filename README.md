@@ -172,7 +172,7 @@ The application is seeded with the following users:
 ---
 
 ## 🎨 Screenshots
-*(Add screenshots of your Login page and Customers table here)*
+![Application Screenshot](screens/app-screenshot.png)
 
 ## 📄 License
 This project is licensed under the MIT License.

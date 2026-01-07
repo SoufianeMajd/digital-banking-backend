@@ -1,7 +1,10 @@
 <div class="row mt-5">
     <div class="col-md-6 offset-md-3">
         <div class="card">
-            <div class="card-header">Authentication</div>
+            <div class="card-header text-center">
+                <img src="assets/images/digital-banking-logo.png" class="login-logo" alt="Logo">
+                <div class="mt-2">Authentication</div>
+            </div>
             <div class="card-body">
                 <div class="text-danger" *ngIf="errorMessage">{{errorMessage}}</div>
                 <form [formGroup]="loginFormGroup" (ngSubmit)="handleLogin()">
