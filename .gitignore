@@ -12,3 +12,6 @@ target/
 .vscode/
 push_to_github.bat
 screens/
+build_output.txt
+startup_output.txt
+startup_output_v2.txt
